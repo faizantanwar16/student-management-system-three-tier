@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Student Information Management System</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <h1>Student Information Management System</h1>
+    <p class="subtitle">Netlify (Frontend) &rarr; Render (Backend API) &rarr; MongoDB Atlas (Database)</p>
+  </header>
+
+  <main class="container">
+
+    <!-- Add / Edit Student Form -->
+    <section class="card">
+      <h2 id="formTitle">Add Student</h2>
+      <form id="studentForm">
+        <input type="hidden" id="editingId" value="" />
+        <div class="form-grid">
+          <div class="field">
+            <label for="studentId">Student ID</label>
+            <input type="text" id="studentId" placeholder="ST101" required />
+          </div>
+          <div class="field">
+            <label for="name">Name</label>
+            <input type="text" id="name" placeholder="Rahul Sharma" required />
+          </div>
+          <div class="field">
+            <label for="email">Email</label>
+            <input type="email" id="email" placeholder="rahul@example.com" required />
+          </div>
+          <div class="field">
+            <label for="department">Department</label>
+            <input type="text" id="department" placeholder="Computer Science" required />
+          </div>
+          <div class="field">
+            <label for="semester">Semester</label>
+            <input type="number" id="semester" min="1" max="12" placeholder="5" required />
+          </div>
+          <div class="field">
+            <label for="contact">Contact</label>
+            <input type="text" id="contact" placeholder="9876543210" />
+          </div>
+        </div>
+        <div class="form-actions">
+          <button type="submit" id="submitBtn" class="btn btn-primary">Add Student</button>
+          <button type="button" id="cancelEditBtn" class="btn btn-secondary" style="display:none;">Cancel</button>
+        </div>
+      </form>
+      <p id="formMessage" class="message"></p>
+    </section>
+
+    <!-- Search + Student List -->
+    <section class="card">
+      <div class="list-header">
+        <h2>Student Records</h2>
+        <div class="search-box">
+          <input type="text" id="searchInput" placeholder="Search by name, ID, or department" />
+          <button id="searchBtn" class="btn btn-secondary">Search</button>
+          <button id="refreshBtn" class="btn btn-secondary">Show All</button>
+        </div>
+      </div>
+
+      <div class="table-wrapper">
+        <table id="studentsTable">
+          <thead>
+            <tr>
+              <th>Student ID</th>
+              <th>Name</th>
+              <th>Email</th>
+              <th>Department</th>
+              <th>Semester</th>
+              <th>Contact</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody id="studentsTableBody">
+            <!-- Rows injected by script.js -->
+          </tbody>
+        </table>
+      </div>
+      <p id="listMessage" class="message"></p>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>Three-Tier Cloud Architecture Demo &mdash; Presentation / Application / Database tiers deployed independently.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
