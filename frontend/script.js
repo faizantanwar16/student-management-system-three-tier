@@ -6,7 +6,7 @@
 //const API_BASE_URL = "https://YOUR-RENDER-BACKEND-URL.onrender.com/api/students";
 const API_BASE_URL_LOCAL = "http://localhost:5000/api/students"; // For local development
 const API_BASE_URL = API_BASE_URL_LOCAL; // Change this to the Render URL in production
-const API_BASE_URL_RENDER = "https://student-api.onrender.com/api/students"; // Example Render URL
+const API_BASE_URL_RENDER = "https://student-management-system-three-tier-1.onrender.com/api/students"; // Example Render URL
 const API_BASE_URL_PROD = API_BASE_URL_RENDER; // Use this in production
 const API_BASE_URL_FINAL = API_BASE_URL_PROD; // Final URL to use in production
 const API_BASE_URL_ACTIVE = API_BASE_URL_FINAL; // Active URL for API calls
